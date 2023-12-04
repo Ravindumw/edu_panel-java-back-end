@@ -8,15 +8,15 @@ CREATE TABLE  IF NOT EXISTS lecturer(
 );
 
 CREATE TABLE IF NOT EXISTS full_time_rank(
-            lecture_id INT NOT NULL ,
+            lecturer_id INT NOT NULL ,
             `rank` INT NOT NULL ,
-            CONSTRAINT pk_full PRIMARY KEY (lecture_id,`rank`),
-            CONSTRAINT fk_full FOREIGN KEY (lecture_id) REFERENCES  lecturer(id)
+            CONSTRAINT pk_full PRIMARY KEY (lecturer_id,`rank`),
+            CONSTRAINT fk_full FOREIGN KEY (lecturer_id) REFERENCES  lecturer(id)
 );
 
 CREATE TABLE IF NOT EXISTS part_time_rank(
-            lecture_id INT NOT NULL ,
+            lecturer_id INT NOT NULL ,
             `rank` INT NOT NULL ,
-            CONSTRAINT pk_part PRIMARY KEY (lecture_id,`rank`),
-            CONSTRAINT fk_part FOREIGN KEY (lecture_id) REFERENCES  lecturer(id)
+            CONSTRAINT pk_part PRIMARY KEY (lecturer_id,`rank`),
+            CONSTRAINT fk_part FOREIGN KEY (lecturer_id) REFERENCES  lecturer(id)
 );
